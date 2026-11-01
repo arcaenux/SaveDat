@@ -38,7 +38,7 @@ public class SaveDat {
                     verdict = "unknown";
                     allDirectories = false;
                 }
-                System.out.println("[ " + extractLabel(argument) + " ]" + argument + ": [ " + verdict + " ]");
+                System.out.println("[ " + extractLabel(argument) + " ] " + extractPath(argument) + ": [ " + verdict + " ]");
 
             } catch ( java.nio.file.InvalidPathException e) {
                 System.out.println(argument + ":  [ invalid path: " + e.getMessage() + " ]");
@@ -54,13 +54,13 @@ public class SaveDat {
 
     static String extractLabel (String argument) {
         int index = argument.indexOf("=");
-        String label = argument.substring(0, index+1);
+        String label = argument.substring(0, index);
         return label;
     }
 
     static String extractPath (String argument) {
         int index = argument.indexOf("=");
-        String path = argument.substring(index);
+        String path = argument.substring(index+1);
         return path;
     }
 
