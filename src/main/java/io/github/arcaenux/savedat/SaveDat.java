@@ -53,13 +53,13 @@ public class SaveDat {
     }
 
     static String extractLabel (String argument) {
-        int index = argument.indexOf("c");
+        int index = argument.indexOf("=");
         String label = argument.substring(0, index+1);
         return label;
     }
 
     static String extractPath (String argument) {
-        int index = argument.indexOf("c");
+        int index = argument.indexOf("=");
         String path = argument.substring(index);
         return path;
     }
