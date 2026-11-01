@@ -1,4 +1,4 @@
-package io.github.axoncron.savedat;
+package io.github.arcaenux.savedat;
 
 import java.nio.file.Files;
 import java.nio.file.Path; 
@@ -12,7 +12,7 @@ public class SaveDat {
 
         for (String argument : args) {
             if (!isValidArgument(argument)){
-                System.err.println("Error: \"" + arg + "\" is not valid. Use the format label=path, e.g. laptop=C:/Projects");
+                System.err.println("Error: \"" + argument + "\" is not valid. Use the format label=path, e.g. laptop=C:/Projects");
                 System.exit(1);
             }
         }
