@@ -3,3 +3,6 @@ target/
 *.class
 .idea/
 .vscode/
+REFACTOR_NOTES.md
+refactor-notes.md
+*.refactor.*
